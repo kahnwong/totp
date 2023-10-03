@@ -12,7 +12,7 @@ var orgsCmd = &cobra.Command{
 	Short: "Get a list of organizations",
 	Long:  `Get a list of organizations`,
 	Run: func(cmd *cobra.Command, args []string) {
-		color.Green("Available orgs:")
+		color.Green("Available organizations:")
 		for _, v := range getOrgs() {
 			fmt.Printf("  - %s\n", v)
 		}

@@ -59,3 +59,16 @@ func getOrgs() []string {
 
 	return orgs
 }
+
+func getAccounts(org string) []string {
+	accounts := make([]string, 0)
+	for _, v := range config {
+		if v.Org == org {
+			for _, v := range v.Accounts {
+				accounts = append(accounts, v.Name)
+			}
+		}
+	}
+
+	return accounts
+}
