@@ -8,8 +8,8 @@ import (
 
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "Get a list of organizations",
-	Long:  `Get a list of organizations`,
+	Short: "Get a list of organizations and accounts",
+	Long:  `Get a list of organizations and accounts`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Please specify a command: [orgs | accounts]")
 	},
