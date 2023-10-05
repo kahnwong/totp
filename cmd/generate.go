@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"encoding/base32"
 	"fmt"
 	"os"
 	"time"
@@ -56,8 +55,6 @@ var generateCmd = &cobra.Command{
 		if isValidOrg {
 			isValidAccount := slices.Contains(getAccounts(args[0]), args[1]) // true
 			if isValidAccount {
-				secret := base32.StdEncoding.EncodeToString([]byte(secret))
-
 				passcode, err := totp.GenerateCode(secret, time.Now())
 				if err != nil {
 					panic(err)

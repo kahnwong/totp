@@ -8,7 +8,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:     "totp",
-	Version: "0.1.0",
+	Version: "0.2.0",
 	Short:   "Generate totp from totp.yaml",
 	Long:    `Generate totp from totp.yaml`,
 }
