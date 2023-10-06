@@ -25,9 +25,9 @@ var accountsCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		isValidDatabase := slices.Contains(getOrgs(), args[0]) // true
+		isValidOrg := slices.Contains(getOrgs(), args[0]) // true
 
-		if isValidDatabase {
+		if isValidOrg {
 			green := color.New(color.FgGreen).SprintFunc()
 
 			fmt.Printf("%s %s\n", green("Organization:"), args[0])
