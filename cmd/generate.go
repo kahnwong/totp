@@ -64,10 +64,9 @@ var generateCmd = &cobra.Command{
 
 				// copy to clipboard
 				err = clipboard.Init()
-				if err != nil {
-					panic(err)
+				if err == nil { // clipboard doesn't work from ssh session
+					clipboard.Write(clipboard.FmtText, []byte(passcode))
 				}
-				clipboard.Write(clipboard.FmtText, []byte(passcode))
 			} else {
 				fmt.Println("Please specify an available account")
 				os.Exit(1)
