@@ -12,15 +12,16 @@ Bonus: it also copies the token to your clipboard.
 go install github.com/kahnwong/totp@latest
 ```
 
-2. create a config file in `~/.config/totp/totp.yaml`
+2. create a config file via with in `~/.config/totp/totp.sops.yaml`
 
 ```yaml
-- org: personal
-  accounts:
-    - name: foo
-      token: XXXXXXXXXXXXXXXXXXXXXXXXX
-    - name: bar
-      token: XXXXXXXXXXXXXXXXXXXXXXXXX
+totp:
+  - org: personal
+    accounts:
+      - name: foo
+        token: XXXXXXXXXXXXXXXXXXXXXXXXX
+      - name: bar
+        token: XXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ## Available commands

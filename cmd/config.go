@@ -16,19 +16,21 @@ var config = readConfig()
 
 // readConfig
 type Config struct {
-	Org      string `yaml:"org"`
-	Accounts []struct {
-		Name  string `yaml:"name"`
-		Token string `yaml:"token"`
-	} `yaml:"accounts"`
+	Totp []struct {
+		Org      string `yaml:"org"`
+		Accounts []struct {
+			Name  string `yaml:"name"`
+			Token string `yaml:"token"`
+		} `yaml:"accounts"`
+	} `yaml:"totp"`
 }
 
-func readConfig() []Config {
+func readConfig() Config {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
 		log.Fatal(err)
 	}
-	filename := filepath.Join(homeDir, ".config", "totp", "totp.sops.yaml.txt")
+	filename := filepath.Join(homeDir, ".config", "totp", "totp.sops.yaml")
 
 	// Check if the file exists
 	_, err = os.Stat(filename)
@@ -38,24 +40,24 @@ func readConfig() []Config {
 		os.Exit(1)
 	}
 
-	var configs []Config
+	var config Config
 
-	data, err := decrypt.File(filename, "txt") // sops yaml specs does not support array at root
+	data, err := decrypt.File(filename, "yaml")
 	if err != nil {
 		fmt.Println(fmt.Printf("Failed to decrypt: %v", err))
 	}
 
-	err = yaml.Unmarshal(data, &configs)
+	err = yaml.Unmarshal(data, &config)
 	if err != nil {
 		fmt.Printf("error: %v\n", err)
 	}
 
-	return configs
+	return config
 }
 
 func getOrgs() []string {
 	orgs := make([]string, 0)
-	for _, v := range config {
+	for _, v := range config.Totp {
 		orgs = append(orgs, v.Org)
 	}
 
@@ -64,7 +66,7 @@ func getOrgs() []string {
 
 func getAccounts(org string) []string {
 	accounts := make([]string, 0)
-	for _, v := range config {
+	for _, v := range config.Totp {
 		if v.Org == org {
 			for _, v := range v.Accounts {
 				accounts = append(accounts, v.Name)

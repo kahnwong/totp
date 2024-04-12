@@ -39,7 +39,7 @@ var generateCmd = &cobra.Command{
 
 		// generate TOTP
 		var secret string
-		for _, c := range config {
+		for _, c := range config.Totp {
 			if c.Org == args[0] {
 				for _, account := range c.Accounts {
 					if account.Name == args[1] {
