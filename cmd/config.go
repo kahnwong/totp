@@ -6,6 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/getsops/sops/v3/decrypt"
+
 	"gopkg.in/yaml.v3"
 )
 
@@ -26,7 +28,7 @@ func readConfig() []Config {
 	if err != nil {
 		log.Fatal(err)
 	}
-	filename := filepath.Join(homeDir, ".config", "totp", "totp.yaml")
+	filename := filepath.Join(homeDir, ".config", "totp", "totp.sops.yaml.txt")
 
 	// Check if the file exists
 	_, err = os.Stat(filename)
@@ -38,12 +40,12 @@ func readConfig() []Config {
 
 	var configs []Config
 
-	source, err := os.ReadFile(filename)
+	data, err := decrypt.File(filename, "txt") // sops yaml specs does not support array at root
 	if err != nil {
-		fmt.Printf("failed reading config file: %v\n", err)
+		fmt.Println(fmt.Printf("Failed to decrypt: %v", err))
 	}
 
-	err = yaml.Unmarshal(source, &configs)
+	err = yaml.Unmarshal(data, &configs)
 	if err != nil {
 		fmt.Printf("error: %v\n", err)
 	}
