@@ -24,3 +24,21 @@ out:
 
 	return accounts
 }
+
+func getTotpSecret(org string, account string) string {
+	var secret string
+
+out:
+	for _, c := range config.Totp {
+		if c.Org == org {
+			for _, accountStruct := range c.Accounts {
+				if accountStruct.Name == account {
+					secret = accountStruct.Token
+				}
+				break out
+			}
+		}
+	}
+
+	return secret
+}

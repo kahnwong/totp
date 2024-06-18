@@ -37,30 +37,20 @@ var generateCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		// generate TOTP
-		var secret string
-
-	out:
-		for _, c := range config.Totp {
-			if c.Org == args[0] {
-				for _, account := range c.Accounts {
-					if account.Name == args[1] {
-						secret = account.Token
-					}
-					break out
-				}
-			}
-		}
+		// validate args
 		isValidOrg := slices.Contains(getOrgs(), args[0]) // true
 
 		if isValidOrg {
 			isValidAccount := slices.Contains(getAccounts(args[0]), args[1]) // true
 			if isValidAccount {
+				// get account token
+				secret := getTotpSecret(args[0], args[1])
+
+				// generate totp
 				passcode, err := totp.GenerateCode(secret, time.Now())
 				if err != nil {
 					panic(err)
 				}
-
 				fmt.Println(passcode)
 
 				// copy to clipboard
@@ -76,7 +66,6 @@ var generateCmd = &cobra.Command{
 			fmt.Println("Please specify an available organization")
 			os.Exit(1)
 		}
-
 	},
 }
 
