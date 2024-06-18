@@ -39,15 +39,16 @@ var generateCmd = &cobra.Command{
 
 		// generate TOTP
 		var secret string
+
+	out:
 		for _, c := range config.Totp {
 			if c.Org == args[0] {
 				for _, account := range c.Accounts {
 					if account.Name == args[1] {
 						secret = account.Token
 					}
-					continue
+					break out
 				}
-				continue
 			}
 		}
 		isValidOrg := slices.Contains(getOrgs(), args[0]) // true
