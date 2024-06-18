@@ -3,7 +3,7 @@ module github.com/kahnwong/totp
 go 1.20
 
 require (
-	github.com/fatih/color v1.16.0
+	github.com/fatih/color v1.17.0
 	github.com/getsops/sops/v3 v3.8.1
 	github.com/pquerna/otp v1.4.0
 	github.com/spf13/cobra v1.8.0
