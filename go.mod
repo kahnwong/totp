@@ -3,7 +3,7 @@ module github.com/kahnwong/totp
 go 1.20
 
 require (
-	github.com/fatih/color v1.17.0
+	github.com/fatih/color v1.18.0
 	github.com/getsops/sops/v3 v3.8.1
 	github.com/pquerna/otp v1.4.0
 	github.com/spf13/cobra v1.8.1
@@ -88,7 +88,7 @@ require (
 	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/oauth2 v0.12.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
-	golang.org/x/sys v0.21.0 // indirect
+	golang.org/x/sys v0.25.0 // indirect
 	golang.org/x/term v0.21.0 // indirect
 	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.0.0-20220609170525-579cf78fd858 // indirect
