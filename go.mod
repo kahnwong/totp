@@ -6,7 +6,7 @@ toolchain go1.23.4
 
 require (
 	github.com/fatih/color v1.18.0
-	github.com/getsops/sops/v3 v3.9.2
+	github.com/getsops/sops/v3 v3.9.3
 	github.com/pquerna/otp v1.4.0
 	github.com/spf13/cobra v1.8.1
 	golang.design/x/clipboard v0.7.0
