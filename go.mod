@@ -10,7 +10,7 @@ require (
 	github.com/pquerna/otp v1.4.0
 	github.com/spf13/cobra v1.8.1
 	golang.design/x/clipboard v0.7.0
-	golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67
+	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
 	gopkg.in/yaml.v3 v3.0.1
 )
 
