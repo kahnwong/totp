@@ -144,6 +144,8 @@ github.com/felixge/httpsnoop v1.0.4 h1:NFTV2Zj1bL4mc9sqWACXbQFVBBg2W3GPvqp8/ESS2
 github.com/felixge/httpsnoop v1.0.4/go.mod h1:m8KPJKqk1gH5J9DgRY2ASl2lWCfGKXixSwevea8zH2U=
 github.com/getsops/gopgagent v0.0.0-20241224165529-7044f28e491e h1:y/1nzrdF+RPds4lfoEpNhjfmzlgZtPqyO3jMzrqDQws=
 github.com/getsops/gopgagent v0.0.0-20241224165529-7044f28e491e/go.mod h1:awFzISqLJoZLm+i9QQ4SgMNHDqljH6jWV0B36V5MrUM=
+github.com/getsops/sops/v3 v3.9.2 h1:Cuuahc/UGu7W3+NXd+mrl+2oXGxxj/jIPsw6Ah2CbxA=
+github.com/getsops/sops/v3 v3.9.2/go.mod h1:J8CMEdmPWT8gxFaNmPBSrc5NFd4uNndf8aFQwhD/ZR8=
 github.com/getsops/sops/v3 v3.9.3 h1:4j1/hZiYkHamyPd9k/mjfCXCxY4mCiUHKp3m4uTkDa4=
 github.com/getsops/sops/v3 v3.9.3/go.mod h1:lk9QjoLCBWtZAaf74HCROFee7HoUOoY5S3PzCyNzzwg=
 github.com/go-jose/go-jose/v4 v4.0.4 h1:VsjPI33J0SB9vQM6PLmNjoHqMQNGPiZ0rHL7Ni7Q6/E=
@@ -313,6 +315,8 @@ golang.org/x/crypto v0.31.0 h1:ihbySMvVjLAeSH1IbfcRTkD/iNscyz8rGzjF/E5hV6U=
 golang.org/x/crypto v0.31.0/go.mod h1:kDsLvtWBEx7MV9tJOj9bnXsPbxwJQ6csT/x4KIN4Ssk=
 golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67 h1:1UoZQm6f0P/ZO0w1Ri+f+ifG/gXhegadRdwBIXEFWDo=
 golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67/go.mod h1:qj5a5QZpwLU2NLQudwIN5koi3beDhSAlJwa67PuM98c=
+golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8 h1:yqrTHse8TCMW1M1ZCP+VAR/l0kKxwaAIqN/il7x4voA=
+golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8/go.mod h1:tujkw807nyEEAamNbDrEGzRav+ilXA7PCRAd6xsmwiU=
 golang.org/x/exp/shiny v0.0.0-20230905200255-921286631fa9 h1:rvxT0xShhCtCvCCmF3wMK57nkbTYSaf/0Tp7TAllhMs=
 golang.org/x/exp/shiny v0.0.0-20230905200255-921286631fa9/go.mod h1:UH99kUObWAZkDnWqppdQe5ZhPYESUw8I0zVV1uWBR+0=
 golang.org/x/image v0.18.0 h1:jGzIakQa/ZXI1I0Fxvaa9W7yP25TqT6cHIHn+6CqvSQ=
