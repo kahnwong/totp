@@ -5,11 +5,11 @@ go 1.22.7
 toolchain go1.23.4
 
 require (
+	github.com/atotto/clipboard v0.1.4
 	github.com/fatih/color v1.18.0
 	github.com/getsops/sops/v3 v3.9.2
 	github.com/pquerna/otp v1.4.0
 	github.com/spf13/cobra v1.8.1
-	golang.design/x/clipboard v0.7.0
 	golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67
 	gopkg.in/yaml.v3 v3.0.1
 )
@@ -114,9 +114,6 @@ require (
 	go.opentelemetry.io/otel/sdk/metric v1.33.0 // indirect
 	go.opentelemetry.io/otel/trace v1.33.0 // indirect
 	golang.org/x/crypto v0.31.0 // indirect
-	golang.org/x/exp/shiny v0.0.0-20230905200255-921286631fa9 // indirect
-	golang.org/x/image v0.18.0 // indirect
-	golang.org/x/mobile v0.0.0-20230301163155-e0f57694e12c // indirect
 	golang.org/x/net v0.33.0 // indirect
 	golang.org/x/oauth2 v0.24.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect

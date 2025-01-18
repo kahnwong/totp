@@ -5,9 +5,9 @@ import (
 	"os"
 	"time"
 
+	"github.com/atotto/clipboard"
 	"github.com/pquerna/otp/totp"
 	"github.com/spf13/cobra"
-	"golang.design/x/clipboard"
 	"golang.org/x/exp/slices"
 )
 
@@ -54,9 +54,9 @@ var generateCmd = &cobra.Command{
 				fmt.Println(passcode)
 
 				// copy to clipboard
-				err = clipboard.Init()
-				if err == nil { // clipboard doesn't work from ssh session
-					clipboard.Write(clipboard.FmtText, []byte(passcode))
+				err = clipboard.WriteAll(passcode)
+				if err != nil {
+					fmt.Println(fmt.Printf("Failed to write to clipboard: %v", err))
 				}
 			} else {
 				fmt.Println("Please specify an available account")
