@@ -5,7 +5,7 @@ go 1.23.5
 require (
 	github.com/atotto/clipboard v0.1.4
 	github.com/fatih/color v1.18.0
-	github.com/kahnwong/cli-base v0.0.0-20250121060804-3c9e867df1e8
+	github.com/kahnwong/cli-base v0.0.0-20250121091831-4eeecf72423f
 	github.com/pquerna/otp v1.4.0
 	github.com/spf13/cobra v1.8.1
 	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
