@@ -6,7 +6,7 @@ require (
 	github.com/atotto/clipboard v0.1.4
 	github.com/fatih/color v1.18.0
 	github.com/kahnwong/cli-base v0.0.0-20250405063011-f3f640b5740a
-	github.com/pquerna/otp v1.4.0
+	github.com/pquerna/otp v1.5.0
 	github.com/spf13/cobra v1.9.1
 	golang.org/x/exp v0.0.0-20250620022241-b7579e27df2b
 )
