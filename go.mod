@@ -8,7 +8,7 @@ require (
 	github.com/kahnwong/cli-base v0.0.0-20250405063011-f3f640b5740a
 	github.com/pquerna/otp v1.5.0
 	github.com/spf13/cobra v1.9.1
-	golang.org/x/exp v0.0.0-20250620022241-b7579e27df2b
+	golang.org/x/exp v0.0.0-20250717185816-542afb5b7346
 )
 
 require (
@@ -115,7 +115,7 @@ require (
 	golang.org/x/crypto v0.36.0 // indirect
 	golang.org/x/net v0.38.0 // indirect
 	golang.org/x/oauth2 v0.25.0 // indirect
-	golang.org/x/sync v0.15.0 // indirect
+	golang.org/x/sync v0.16.0 // indirect
 	golang.org/x/sys v0.31.0 // indirect
 	golang.org/x/term v0.30.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
