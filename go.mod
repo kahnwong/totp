@@ -7,7 +7,7 @@ require (
 	github.com/fatih/color v1.18.0
 	github.com/kahnwong/cli-base v0.0.0-20250405063011-f3f640b5740a
 	github.com/pquerna/otp v1.5.0
-	github.com/spf13/cobra v1.9.1
+	github.com/spf13/cobra v1.10.1
 	golang.org/x/exp v0.0.0-20250718183923-645b1fa84792
 )
 
@@ -101,7 +101,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
-	github.com/spf13/pflag v1.0.6 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
 	github.com/urfave/cli v1.22.16 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
 	go.opentelemetry.io/contrib/detectors/gcp v1.33.0 // indirect
