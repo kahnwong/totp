@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	cliBase "github.com/kahnwong/cli-base"
+	cliBase "github.com/kahnwong/cli-base-sops"
 )
 
 var config = cliBase.ReadYamlSops[Config]("~/.config/totp/totp.sops.yaml")
