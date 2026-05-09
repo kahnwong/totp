@@ -8,7 +8,7 @@ require (
 	github.com/kahnwong/cli-base-sops v0.0.0-20260130184704-f74848815081
 	github.com/pquerna/otp v1.5.0
 	github.com/spf13/cobra v1.10.2
-	golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f
+	golang.org/x/exp v0.0.0-20260508232706-74f9aab9d74a
 )
 
 require (
