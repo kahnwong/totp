@@ -1,11 +1,11 @@
 module github.com/kahnwong/totp
 
-go 1.25.0
+go 1.26.3
 
 require (
 	github.com/atotto/clipboard v0.1.4
 	github.com/fatih/color v1.19.0
-	github.com/kahnwong/cli-base-sops v0.0.0-20260510143248-ef95c3ba4803
+	github.com/kahnwong/cli-base-sops v0.0.0-20260510152952-2b3c177f4b1f
 	github.com/pquerna/otp v1.5.0
 	github.com/spf13/cobra v1.10.2
 	golang.org/x/exp v0.0.0-20260508232706-74f9aab9d74a
